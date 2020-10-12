@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sadge</title>
+    </head>
+    <body>
+        <style>
+            body
+            {
+                background-image: url('background.jpg');
+                background-size: cover;
+                overflow: auto;
+            }
+        </style>
+        <script>
+            document.onclick = play;
+          
+            function play() 
+            {
+                var audio = new Audio('music.m4a');
+                audio.play();
+                var x = event.clientX;
+                var y = event.clientY;
+                var sadge = document.createElement('img');
+                sadge.src = 'https://i.kym-cdn.com/photos/images/newsfeed/001/857/750/4ab.png'
+                sadge.style.display = '';
+                sadge.style.position = 'absolute';
+                sadge.style.left = x - 50 + 'px';
+                sadge.style.top = y - 50 + 'px';
+                this.body.appendChild(sadge);
+            }
+        </script>
+    </body>
+</html>
